@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!{% endblock %}
+
+{% block body %}
+    
+    <h1 class="text-center p-4">Voitures d'occasion</h1>
+
+    {% for product in products %}
+
+<div class="col pb-2 d-flex">
+<div class="card m-4" style="width: 40rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ product.title }}</h5>
+    <p class="card-text">{{ product.content }}</p>
+    <a href="#" class="btn btn-primary">{{ product.price }}€</a>
+  </div>
+</div>
+</div>
+
+    {% endfor %}
+
+
+
+{% endblock %}
